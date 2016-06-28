@@ -16,8 +16,27 @@
     %br/
     = f.text_field :body
   .field
+    = f.label :born_on
+    %br/
+    = week_field("post", "born_on")
+  .field
     = f.label :starred
     %br/
     = f.check_box :starred
+    %br/
+  .field
+    = f.label :email
+    %br/
+    = f.text_field :email
+    %br/
+  .field
+    = f.label :url
+    %br/
+    = url_field("posts", "index")
+    %br/
+  .field
+    = f.label :starred_at
+    %br/
+    = time_field("task", "started_at", min: "01:00:00")
   .actions
     = f.submit
